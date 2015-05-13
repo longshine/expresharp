@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Expresharp</id>
+        <version>0.4.12.0</version>
+        <title>Expresharp</title>
+        <authors>Longshine</authors>
+        <owners>Longshine</owners>
+        <licenseUrl>https://raw.githubusercontent.com/longshine/expresharp/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/longshine/expresharp</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Express.js style web application framework for .NET</description>
+        <summary>Express.js style web application framework for .NET</summary>
+        <releaseNotes> * 0.4.12.0
+  - First release based on Express.js 4.12.3</releaseNotes>
+        <tags>express web rest restful router api</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System"/>
+            <frameworkAssembly assemblyName="System.Core"/>
+            <frameworkAssembly assemblyName="System.Web"/>
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="Expresharp\bin\Release\Expresharp.dll" target="lib\net40\" />
+        <file src="Expresharp\bin\Release\Expresharp.xml" target="lib\net40\" />
+        <file src="LICENSE" target="LICENSE" />
+    </files>
+</package>

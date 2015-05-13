@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Expresharp.Fleck</id>
+        <version>0.4.12.0</version>
+        <title>Expresharp.Fleck</title>
+        <authors>Longshine</authors>
+        <owners>Longshine</owners>
+        <licenseUrl>https://raw.githubusercontent.com/longshine/expresharp/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/longshine/expresharp</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>WebSocket extension for Expresharp with Fleck</description>
+        <summary>WebSocket extension for Expresharp with Fleck</summary>
+        <tags>express web rest restful websocket websockets</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System"/>
+            <frameworkAssembly assemblyName="System.Core"/>
+        </frameworkAssemblies>
+        <dependencies>
+					<dependency id="Expresharp" version="0.4.12.0" />
+					<dependency id="Fleck" version="0.13.0.48" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Expresharp.Fleck\bin\Release\Expresharp.Fleck.dll" target="lib\net40\" />
+        <file src="Expresharp.Fleck\bin\Release\Expresharp.Fleck.xml" target="lib\net40\" />
+        <file src="LICENSE" target="LICENSE" />
+    </files>
+</package>
