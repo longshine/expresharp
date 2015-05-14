@@ -567,7 +567,7 @@ namespace Expresharp
                 host= pricipal.IsInRole(WindowsBuiltInRole.Administrator) ? "*" : "localhost";
             HttpListener listener = new HttpListener();
             listener.Prefixes.Add(String.Format("http://{0}:{1}/", host, port));
-            listener.Start();
+            Listen(listener);
             return listener;
         }
 
