@@ -1,7 +1,6 @@
 # Expresharp - Express on .NET
-==============================
 
-Expresharp is a [single file] (/longshine/expresharp/blob/master/Expresharp/Express.cs)
+Expresharp is a [single file] (https://github.com/longshine/expresharp/blob/master/Expresharp/Express.cs)
 that can be drop in to your project and enable coding like [Express.js] (http://expressjs.com) for web application.
 
 Express.js is a:
@@ -35,6 +34,8 @@ It starts a server and listens on port 3000 for connection.
 It will respond with “Hello World!” for requests to the homepage.
 For every other path, it will respond with a **404 Not Found**.
 
+[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/HelloWorld/Program.cs)
+
 ```csharp
 using System;
 using System.Linq;
@@ -65,6 +66,8 @@ method (GET, POST, and so on).
 Each route can have one or more handler functions, which is / are executed
 when the route is matched.
 
+[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/BasicRouting/Program.cs)
+
 ```csharp
 // respond with "Hello World!" on the homepage
 app.Get("/", (req, res) => res.Send("Hello World!"));
@@ -83,6 +86,8 @@ app.Delete("/user", (req, res) => res.Send("Got a DELETE request at /user"));
 
 Serving files, such as images, CSS, JavaScript and other static files
 is accomplished with the help of a built-in middleware - `Express.Static`.
+
+[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/StaticFiles/Program.cs)
 
 ```csharp
 app.Use(Express.Static("public"));
@@ -118,4 +123,4 @@ on [Express.js] (http://expressjs.com) website.
 
 ## License
 
-[MIT] (/longshine/expresharp/blob/master/LICENSE)
+[MIT] (https://github.com/longshine/expresharp/blob/master/LICENSE)
