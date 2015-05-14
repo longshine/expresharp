@@ -178,7 +178,9 @@ app.Use("/chat", echo);
 ### Note
 
 The `System.Net.HttpListener` inside Expresharp accepts WebSocket connections
-only on .NET 4.5+ and Windows 8+. For other platforms, a better choice
+only on .NET 4.5+ and Windows 8+ [[1]]
+(https://connect.microsoft.com/VisualStudio/feedback/details/672604/websocket-support-missing-from-http-sys).
+For other platforms, a better choice
 is to adapt Expresharp to a 3rd party or your own HTTP server.
 Check out next section and [Custom HTTP server]
 (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
