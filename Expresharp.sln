@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expresharp.Fleck", "Expresh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expresharp.Test", "Expresharp.Test\Expresharp.Test.csproj", "{78A5630B-0933-4C28-BE22-BF89C4EA9AEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{A1F86F56-587F-4381-9D2C-AAB386933564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Expresharp.Example\HelloWorld\HelloWorld.csproj", "{AC6B93F6-9927-414D-A0E3-A1730D311C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicRouting", "Expresharp.Example\BasicRouting\BasicRouting.csproj", "{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFiles", "Expresharp.Example\StaticFiles\StaticFiles.csproj", "{4F45E7FB-12F9-449D-BC74-0AE365800826}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_Ubuntu|Any CPU = Debug_Ubuntu|Any CPU
@@ -39,8 +47,37 @@ Global
 		{78A5630B-0933-4C28-BE22-BF89C4EA9AEB}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
 		{78A5630B-0933-4C28-BE22-BF89C4EA9AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A5630B-0933-4C28-BE22-BF89C4EA9AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC6B93F6-9927-414D-A0E3-A1730D311C83} = {A1F86F56-587F-4381-9D2C-AAB386933564}
+		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9} = {A1F86F56-587F-4381-9D2C-AAB386933564}
+		{4F45E7FB-12F9-449D-BC74-0AE365800826} = {A1F86F56-587F-4381-9D2C-AAB386933564}
 	EndGlobalSection
 EndGlobal
