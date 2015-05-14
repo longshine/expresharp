@@ -523,11 +523,19 @@ namespace Expresharp
                     Exception err = o as Exception;
                     if (err != null)
                     {
-                        res.StatusCode = 500;
+                        if (res.StatusCode < 500)
+                            res.StatusCode = 500;
+
+#if DEBUG
+                        res.Send("<pre>" + HttpUtility.HtmlEncode(err.ToString()) + "</pre>");
+#else
+                        res.Send(err.Message);
+#endif
                     }
                     else
                     {
                         res.StatusCode = 404;
+                        res.Send(String.Format("Cannot {0} {1}\n", HttpUtility.HtmlEncode(req.HttpMethod), HttpUtility.HtmlEncode(req.RawUrl)));
                     }
 
                     res.End();
