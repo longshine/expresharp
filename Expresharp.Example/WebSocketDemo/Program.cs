@@ -29,6 +29,7 @@ namespace Expresharp.Example.WebSocketDemo
             var echo = new WebSocketMiddleware();
             app.Use("/echo", echo);
 
+            // configure events of incoming websocket
             echo.OnConnection(ws =>
             {
                 ws.OnOpen = () => Console.WriteLine("Opened: {0}:{1}", ws.ConnectionInfo.ClientIpAddress, ws.ConnectionInfo.ClientPort);
@@ -255,7 +256,13 @@ namespace Expresharp.Example.WebSocketDemo
             {
                 readonly HttpRequestImpl _request;
                 readonly Socket _socket;
+                /// <summary>
+                /// raw stream for websocket
+                /// </summary>
                 Stream _raw;
+                /// <summary>
+                /// wrapped stream for HTTP response
+                /// </summary>
                 Stream _wrapped;
                 int _statusCode;
                 string _statusDescription;
@@ -351,6 +358,9 @@ namespace Expresharp.Example.WebSocketDemo
                     _socket.Dispose();
                 }
 
+                /// <summary>
+                /// Clears context of WebSocket so that this response could act like a normal one.
+                /// </summary>
                 private void ClearWebSocketContext()
                 {
                     _raw = null;
