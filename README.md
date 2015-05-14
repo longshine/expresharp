@@ -121,6 +121,96 @@ For more docs please refer to [Guide] (http://expressjs.com/guide/routing.html)
 or [API reference] (http://expressjs.com/4x/api.html)
 on [Express.js] (http://expressjs.com) website.
 
+## WebSocket
+
+[Expresharp.Fleck] (https://github.com/longshine/expresharp/blob/master/Expresharp.Fleck/WebSocketMiddleware.cs)
+is a middleware of Express which enables WebSocket ability by [Fleck] (https://github.com/statianzo/Fleck).
+
+### Installation
+
+Expresharp.Fleck is available on [NuGet] (http://www.nuget.org/packages/Expresharp.Fleck/).
+
+```powershell
+PM> Install-Package Expresharp
+```
+
+### Usage
+
+[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/WebSocketDemo/Program.cs)
+
+It's easy to add WebSocket handler to a specified path or globally with extension methods.
+
+```csharp
+app.WebSocket("/echo", ws =>
+{
+  ws.OnOpen = () => Console.WriteLine("Opened");
+  ws.OnClose = () => Console.WriteLine("Closed");
+  ws.OnError = e => Console.WriteLine("Error: {0}", e);
+  ws.OnMessage = msg =>
+  {
+    Console.WriteLine("Received: {0}", msg);
+    ws.Send("Echo: " + msg);
+  };
+});
+```
+
+Or create an instance of the `WebSocketMiddleware` for reuse:
+
+```csharp
+var echo = new WebSocketMiddleware();
+
+echo.OnConnection(ws =>
+{
+  ws.OnOpen = () => Console.WriteLine("Opened");
+  ws.OnClose = () => Console.WriteLine("Closed");
+  ws.OnError = e => Console.WriteLine("Error: {0}", e);
+  ws.OnMessage = msg =>
+  {
+    Console.WriteLine("Received: {0}", msg);
+    ws.Send("Echo: " + msg);
+  };
+});
+
+app.Use("/echo", echo);
+app.Use("/chat", echo);
+```
+
+### Note
+
+The `System.Net.HttpListener` inside Expresharp accepts WebSocket connections
+only on .NET 4.5+ and Windows 8+. For other platforms, a better choice
+is to adapt Expresharp to a 3rd party or your own HTTP server.
+Check out next section and [Custom HTTP server]
+(https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
+example for more.
+
+## Custom HTTP server
+
+Instead of `System.Net.HttpListener`, you may like to customize your
+own HTTP server. This is quite simple with Expresharp.
+
+There are two interfaces in your concern: `IHttpRequest` and `IHttpResponse`.
+Whenever you like, wrap your requests/responses as these two interfaces,
+push them into an Expresharp app, and let Express take care of the rest.
+
+[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
+
+```csharp
+class CustomHttpRequest : IHttpRequest { }
+class CustomHttpResponse : IHttpResponse { }
+
+// here comes your request/response, wrap them up!
+var req = new CustomHttpRequest(request);
+var res = new CustomHttpResponse(response);
+
+// push req/res into the Express app, and that's all :)
+app.Handle(req, res, null);
+```
+
+The last parameter of `app.Handle(IHttpRequest, IHttpResponse, Next)`
+is a handler that will receive all requests not consumed by any route,
+such as errors and 404s. For most cases, a `null` is enough.
+
 ## License
 
 [MIT] (https://github.com/longshine/expresharp/blob/master/LICENSE)
