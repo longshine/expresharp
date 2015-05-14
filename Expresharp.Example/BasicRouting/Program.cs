@@ -2,7 +2,7 @@
 using System.Linq;
 using Expresharp;
 
-namespace BasicRouting
+namespace Expresharp.Example.BasicRouting
 {
     class Program
     {

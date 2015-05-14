@@ -2,7 +2,7 @@
 using System.Linq;
 using Expresharp;
 
-namespace StaticFiles
+namespace Expresharp.Example.StaticFiles
 {
     class Program
     {

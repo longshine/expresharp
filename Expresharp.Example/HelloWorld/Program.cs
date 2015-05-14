@@ -2,7 +2,7 @@
 using System.Linq;
 using Expresharp;
 
-namespace HelloWorld
+namespace Expresharp.Example.HelloWorld
 {
     class Program
     {
