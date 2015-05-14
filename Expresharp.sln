@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicRouting", "Expresharp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFiles", "Expresharp.Example\StaticFiles\StaticFiles.csproj", "{4F45E7FB-12F9-449D-BC74-0AE365800826}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketDemo", "Expresharp.Example\WebSocketDemo\WebSocketDemo.csproj", "{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_Ubuntu|Any CPU = Debug_Ubuntu|Any CPU
@@ -71,6 +73,14 @@ Global
 		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
 		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F45E7FB-12F9-449D-BC74-0AE365800826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Debug_Ubuntu|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Debug_Ubuntu|Any CPU.Build.0 = Debug|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Release_Ubuntu|Any CPU.ActiveCfg = Release|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Release_Ubuntu|Any CPU.Build.0 = Release|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,5 +89,6 @@ Global
 		{AC6B93F6-9927-414D-A0E3-A1730D311C83} = {A1F86F56-587F-4381-9D2C-AAB386933564}
 		{EAB80E30-FFD6-4AB4-A918-7BA12BF725F9} = {A1F86F56-587F-4381-9D2C-AAB386933564}
 		{4F45E7FB-12F9-449D-BC74-0AE365800826} = {A1F86F56-587F-4381-9D2C-AAB386933564}
+		{BC29CE9D-E02C-4568-AEC1-FEF99FB62A12} = {A1F86F56-587F-4381-9D2C-AAB386933564}
 	EndGlobalSection
 EndGlobal
