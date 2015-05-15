@@ -131,7 +131,7 @@ is a middleware of Express which enables WebSocket ability by [Fleck] (https://g
 Expresharp.Fleck is available on [NuGet] (http://www.nuget.org/packages/Expresharp.Fleck/).
 
 ```powershell
-PM> Install-Package Expresharp
+PM> Install-Package Expresharp.Fleck
 ```
 
 ### Usage
