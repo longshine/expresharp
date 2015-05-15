@@ -42,6 +42,12 @@ namespace Expresharp.Example.WebSocketDemo
                 };
             });
 
+            // or this way if you prefer
+            app.WebSocket("/chat", ws =>
+            {
+                ws.OnMessage = msg => ws.Send("Chat: " + msg);
+            });
+
             // start a custom HTTP server and pass request/response pair to Express app
             var server = new HttpServer(IPAddress.Any, 8080);
             server.Start((req, res) => app.Handle(req, res, null));
