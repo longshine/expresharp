@@ -1,11 +1,11 @@
 # Expresharp - Express on .NET
 
-Expresharp is a [single file] (https://github.com/longshine/expresharp/blob/master/Expresharp/Express.cs)
-that can be drop in to your project and enable coding like [Express.js] (http://expressjs.com) for web application.
+Expresharp is a [single file](https://github.com/longshine/expresharp/blob/master/Expresharp/Express.cs)
+that can be drop in to your project and enable coding like [Express.js](http://expressjs.com) for web application.
 
 Express.js is a:
 
-> Fast, unopinionated, minimalist web framework for [node] (http://nodejs.org).
+> Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).
 
 Have fun!
 
@@ -21,7 +21,7 @@ var server = app.Listen(3000);
 
 ### Installation
 
-Expresharp is available on [NuGet] (http://www.nuget.org/packages/Expresharp/).
+Expresharp is available on [NuGet](http://www.nuget.org/packages/Expresharp/).
 
 ```powershell
 PM> Install-Package Expresharp
@@ -34,7 +34,7 @@ It starts a server and listens on port 3000 for connection.
 It will respond with “Hello World!” for requests to the homepage.
 For every other path, it will respond with a **404 Not Found**.
 
-[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/HelloWorld/Program.cs)
+[`view code`](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/HelloWorld/Program.cs)
 
 ```csharp
 using System;
@@ -66,7 +66,7 @@ method (GET, POST, and so on).
 Each route can have one or more handler functions, which is / are executed
 when the route is matched.
 
-[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/BasicRouting/Program.cs)
+[`view code`](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/BasicRouting/Program.cs)
 
 ```csharp
 // respond with "Hello World!" on the homepage
@@ -87,7 +87,7 @@ app.Delete("/user", (req, res) => res.Send("Got a DELETE request at /user"));
 Serving files, such as images, CSS, JavaScript and other static files
 is accomplished with the help of a built-in middleware - `Express.Static`.
 
-[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/StaticFiles/Program.cs)
+[`view code`](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/StaticFiles/Program.cs)
 
 ```csharp
 app.Use(Express.Static("public"));
@@ -117,18 +117,18 @@ http://localhost:3000/static/js/app.js
 http://localhost:3000/static/hello.html
 ```
 
-For more docs please refer to [Guide] (http://expressjs.com/guide/routing.html)
-or [API reference] (http://expressjs.com/4x/api.html)
-on [Express.js] (http://expressjs.com) website.
+For more docs please refer to [Guide](http://expressjs.com/guide/routing.html)
+or [API reference](http://expressjs.com/4x/api.html)
+on [Express.js](http://expressjs.com) website.
 
 ## WebSocket
 
-[Expresharp.Fleck] (https://github.com/longshine/expresharp/blob/master/Expresharp.Fleck/WebSocketMiddleware.cs)
-is a middleware of Express which enables WebSocket ability by [Fleck] (https://github.com/statianzo/Fleck).
+[Expresharp.Fleck](https://github.com/longshine/expresharp/blob/master/Expresharp.Fleck/WebSocketMiddleware.cs)
+is a middleware of Express which enables WebSocket ability by [Fleck](https://github.com/statianzo/Fleck).
 
 ### Installation
 
-Expresharp.Fleck is available on [NuGet] (http://www.nuget.org/packages/Expresharp.Fleck/).
+Expresharp.Fleck is available on [NuGet](http://www.nuget.org/packages/Expresharp.Fleck/).
 
 ```powershell
 PM> Install-Package Expresharp.Fleck
@@ -136,7 +136,7 @@ PM> Install-Package Expresharp.Fleck
 
 ### Usage
 
-[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/WebSocketDemo/Program.cs)
+[`view code`](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/WebSocketDemo/Program.cs)
 
 It's easy to add WebSocket handler to a specified path or globally with extension methods.
 
@@ -182,8 +182,7 @@ only on .NET 4.5+ and Windows 8+ [[1]]
 (https://connect.microsoft.com/VisualStudio/feedback/details/672604/websocket-support-missing-from-http-sys).
 For other platforms, a better choice
 is to adapt Expresharp to a 3rd party or your own HTTP server.
-Check out next section and [Custom HTTP server]
-(https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
+Check out next section and [Custom HTTP server](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
 example for more.
 
 ## Custom HTTP server
@@ -195,7 +194,7 @@ There are two interfaces in your concern: `IHttpRequest` and `IHttpResponse`.
 Whenever you like, wrap your requests/responses as these two interfaces,
 push them into an Expresharp app, and let Express take care of the rest.
 
-[`view code`] (https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
+[`view code`](https://github.com/longshine/expresharp/blob/master/Expresharp.Example/CustomHttpServer/Program.cs)
 
 ```csharp
 class CustomHttpRequest : IHttpRequest { }
@@ -215,4 +214,4 @@ such as errors and 404s. For most cases, a `null` is enough.
 
 ## License
 
-[MIT] (https://github.com/longshine/expresharp/blob/master/LICENSE)
+[MIT](https://github.com/longshine/expresharp/blob/master/LICENSE)
